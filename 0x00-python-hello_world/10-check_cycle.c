@@ -11,6 +11,10 @@ int check_cycle(listint_t *list)
 {
 	listint_t *speed1, *speed2;
 
+	if (list == NULL)
+	{
+		return (0);
+	}
 	speed1 = list;
 	speed2 = list;
 	while (speed2 != NULL)
