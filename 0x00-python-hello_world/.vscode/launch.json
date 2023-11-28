@@ -6,10 +6,10 @@
       "type": "cppdbg",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
+      "stopAtEntry": true,
       "externalConsole": false,
       "cwd": "/home/koko/KOKO/ALX/alx-higher_level_programming/0x00-python-hello_world",
-      "program": "/home/koko/KOKO/ALX/alx-higher_level_programming/0x00-python-hello_world/build/Debug/outDebug",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
