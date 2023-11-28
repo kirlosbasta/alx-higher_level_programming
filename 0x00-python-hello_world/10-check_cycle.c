@@ -24,7 +24,7 @@ int check_cycle(listint_t *list)
 			speed2 = speed2->next;
 		if (speed2 != NULL)
 			speed2 = speed2->next;
-		if (speed1 == speed2)
+		if (speed1 == speed2 && speed1)
 		{
 			return (1);
 		}
