@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-fizzbuzz = __import__('12-fizzbuzz').fizzbuzz
+#!/usr/bin/python3
+remove_char_at = __import__('101-remove_char_at').remove_char_at
 
-fizzbuzz()
-print("")
+print(remove_char_at("Chicago", 3))

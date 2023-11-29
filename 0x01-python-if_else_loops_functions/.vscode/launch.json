@@ -6,10 +6,10 @@
       "type": "cppdbg",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
+      "stopAtEntry": true,
       "externalConsole": false,
       "cwd": "/home/koko/KOKO/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions",
-      "program": "/home/koko/KOKO/ALX/alx-higher_level_programming/0x01-python-if_else_loops_functions/build/Debug/outDebug",
+      "program": "${file}",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
