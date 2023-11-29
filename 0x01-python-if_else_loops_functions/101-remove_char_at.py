@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
     """Remove char at n and print the remaining"""
+    if (n > len(str)):
+        print(str)
     new_str = ""
     for i in range(len(str)):
         if i != n:
