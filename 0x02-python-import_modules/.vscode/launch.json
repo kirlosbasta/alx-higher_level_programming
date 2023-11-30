@@ -10,7 +10,7 @@
 			"type": "python",
 			"request": "launch",
 			"program": "${file}",
-			"args": ["dfdfas", "dffdff", "fdfafds"],
+			"args": ["4", "2"],
 			"console": "integratedTerminal",
 			"justMyCode": true
 		}
