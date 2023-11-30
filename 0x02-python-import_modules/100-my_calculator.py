@@ -12,7 +12,7 @@ if __name__ == '__main__':
     op = argv[2]
     match op:
         case '+':
-            print("{:d} {:s} {:d} = {:d}".format(a, op, b, add(a, b)))
+            print("{} {} {} = {}".format(a, op, b, add(a, b)))
         case '-':
             print("{:d} {:s} {:d} = {:d}".format(a, op, b, sub(a, b)))
         case '*':
