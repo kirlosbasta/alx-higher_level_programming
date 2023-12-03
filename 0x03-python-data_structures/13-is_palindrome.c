@@ -29,6 +29,7 @@ int is_palindrome(listint_t **head)
 		list[count++] = current->n;
 		current = current->next;
 	}
+	list = realloc(list, count);
 	for (i = 0; i < (count / 2); i++)
 	{
 		if (list[i] != list[count - 1 - i])
