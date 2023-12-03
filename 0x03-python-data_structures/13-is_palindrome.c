@@ -14,7 +14,9 @@ int is_palindrome(listint_t **head)
 	int count = 0, i;
 	listint_t *current = *head;
 
-	if (current == NULL)
+	if (list == NULL)
+		return (0);
+	if (current == NULL || current->next == NULL)
 	{
 		free(list);
 		return (1);
@@ -24,12 +26,13 @@ int is_palindrome(listint_t **head)
 		if (count > 9)
 		{
 			list = realloc(list, size_list + 1);
+			if (list == NULL)
+				return (0);
 			size_list++;
 		}
 		list[count++] = current->n;
 		current = current->next;
 	}
-	list = realloc(list, count);
 	for (i = 0; i < (count / 2); i++)
 	{
 		if (list[i] != list[count - 1 - i])
