@@ -10,7 +10,7 @@
 int is_palindrome(listint_t **head)
 {
 	int *list = malloc(sizeof(int) * 10);
-	int size_list = 10;
+	int size_list = 10 * sizeof(int);
 	int count = 0, i;
 	listint_t *current = *head;
 
@@ -23,12 +23,12 @@ int is_palindrome(listint_t **head)
 	}
 	while (current != NULL)
 	{
-		if (count > 9)
+		if (count >= 9)
 		{
-			list = realloc(list, size_list + 1);
+			list = realloc(list, size_list * 2);
 			if (list == NULL)
 				return (0);
-			size_list++;
+			size_list *= 2;
 		}
 		list[count++] = current->n;
 		current = current->next;
