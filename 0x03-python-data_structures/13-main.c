@@ -22,7 +22,6 @@ int main(void)
 	add_nodeint_end(&head, 8);
 	add_nodeint_end(&head, 9);
 	add_nodeint_end(&head, 10);
-	add_nodeint_end(&head, 11);
 	add_nodeint_end(&head, 10);
 	add_nodeint_end(&head, 9);
 	add_nodeint_end(&head, 8);
