@@ -9,38 +9,28 @@
 
 int is_palindrome(listint_t **head)
 {
-	int *list = malloc(sizeof(int) * 10);
-	int size_list = 10 * sizeof(int);
-	int count = 0, i;
-	listint_t *current = *head;
+    listint_t *slow = *head, *fast = *head, *prev = NULL, *next;
 
-	if (list == NULL)
-		return (0);
-	if (current == NULL || current->next == NULL)
-	{
-		free(list);
-		return (1);
-	}
-	while (current != NULL)
-	{
-		if (count >= 9)
-		{
-			size_list *= 2;
-			list = realloc(list, size_list);
-			if (list == NULL)
-				return (0);
-		}
-		list[count++] = current->n;
-		current = current->next;
-	}
-	for (i = 0; i < (count / 2); i++)
-	{
-		if (list[i] != list[count - 1 - i])
-		{
-			free(list);
-			return (0);
-		}
-	}
-	free(list);
-	return (1);
+    if (*head == NULL)
+        return (1);
+
+    while (fast != NULL && fast->next != NULL)
+    {
+        fast = fast->next->next;
+        next = slow->next;
+        slow->next = prev;
+        prev = slow;
+        slow = next;
+    }
+
+    if (fast != NULL)
+        slow = slow->next;
+
+    while (prev != NULL && prev->n == slow->n)
+    {
+        slow = slow->next;
+        prev = prev->next;
+    }
+
+    return (prev == NULL);
 }
