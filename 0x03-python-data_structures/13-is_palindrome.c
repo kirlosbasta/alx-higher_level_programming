@@ -25,10 +25,10 @@ int is_palindrome(listint_t **head)
 	{
 		if (count >= 9)
 		{
-			list = realloc(list, size_list * 2);
+			size_list *= 2;
+			list = realloc(list, size_list);
 			if (list == NULL)
 				return (0);
-			size_list *= 2;
 		}
 		list[count++] = current->n;
 		current = current->next;
