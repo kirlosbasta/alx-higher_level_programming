@@ -1,7 +1,19 @@
 #!/usr/bin/python3
-multiply_list_map = __import__('11-multiply_list_map').multiply_list_map
+""" Roman to Integer test file
+"""
+roman_to_int = __import__('12-roman_to_int').roman_to_int
 
-my_list = [1, 2, 3, 4, 6]
-new_list = multiply_list_map(my_list, 4)
-print(new_list)
-print(my_list)
+roman_number = "MCMXII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "MMXXIII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "MCM"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "XXXIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "MMMCMXCIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
