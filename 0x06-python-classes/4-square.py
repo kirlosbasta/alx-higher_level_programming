@@ -13,11 +13,13 @@ class Square:
         """
 
         self.size = size
+
     @property
     def size(self):
         """Return the size of square"""
 
         return self.__size
+
     @size.setter
     def size(self, val):
         """Validate the size"""
