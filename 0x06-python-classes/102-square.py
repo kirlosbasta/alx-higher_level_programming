@@ -24,7 +24,7 @@ class Square:
     def size(self, val):
         """Validate the size"""
 
-        if not isinstance(val, int) or not isinstance(val, float):
+        if not isinstance(val, int):
             raise TypeError('size must be a number')
         elif val < 0:
             raise ValueError('size must be >= 0')
