@@ -81,5 +81,6 @@ class Square:
             sq += ' ' * self.__position[0]
             for j in range(self.__size):
                 sq += '#'
-            sq += '\n'
+            if i != self.__size - 1:
+                sq += '\n'
         return sq
