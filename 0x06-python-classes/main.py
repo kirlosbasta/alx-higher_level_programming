@@ -1,18 +1,5 @@
 #!/usr/bin/python3
-Square = __import__('102-square').Square
+MagicClass = __import__('103-magic_class').MagicClass
 
-s_5 = Square(5)
-s_6 = Square(6)
-
-if s_5 < s_6:
-    print("Square 5 < Square 6")
-if s_5 <= s_6:
-    print("Square 5 <= Square 6")
-if s_5 == s_6:
-    print("Square 5 == Square 6")
-if s_5 != s_6:
-    print("Square 5 != Square 6")
-if s_5 > s_6:
-    print("Square 5 > Square 6")
-if s_5 >= s_6:
-    print("Square 5 >= Square 6")
+mc = MagicClass(12)
+print('{}'.format(mc.area()))
