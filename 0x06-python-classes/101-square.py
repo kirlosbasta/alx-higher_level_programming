@@ -73,7 +73,6 @@ class Square:
         """print the square"""
         sq = ""
         if self.__size == 0:
-            sq = "\n"
             return sq
         for i in range(self.__position[1]):
             sq += '\n'
