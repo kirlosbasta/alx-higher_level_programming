@@ -2,9 +2,6 @@
 """Module for locked Class only"""
 
 
-from typing import Any
-
-
 class LockedClass:
     """Class that can set only first_name as it attribute any thing
         else raise attribute error
