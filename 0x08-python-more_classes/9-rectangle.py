@@ -70,6 +70,14 @@ class Rectangle:
         else:
             return rect_2
 
+    @classmethod
+    def square(cls, size=0):
+        """returns a new Rectangle instance with width == height == size
+            Args:
+                size: Size of the width and height
+        """
+        return cls(size, size)
+
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
