@@ -47,6 +47,9 @@ class Rectangle:
             return 0
         return (2 * self.width) + (2 * self.height)
 
+    def __eq__(self, other):
+        return self.area() == other.area()
+
     def __ge__(self, other):
         return self.area() >= other.area()
 
