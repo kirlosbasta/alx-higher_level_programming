@@ -34,3 +34,8 @@ TypeError: width must be an integer
 Traceback (most recent call last):
 ...
 TypeError: {'a': 1} must be an integer
+
+>>> bg.integer_validator("more invalid testing", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: more invalid testing must be an integer
