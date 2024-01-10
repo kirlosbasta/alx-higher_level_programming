@@ -10,12 +10,14 @@ def reset_status(status):
     for key in status:
         status[key] = 0
 
+
 def print_result(status, file_size):
     '''print the meterics'''
     print('File size: {}'.format(file_size))
     for key in sorted(status):
         if status[key] != 0:
             print(f'{key}: {status[key]}')
+
 
 def main():
     file_size = 0
