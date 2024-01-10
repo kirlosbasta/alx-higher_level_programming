@@ -26,7 +26,7 @@ def main():
             counter += 1
             if counter == 10:
                 print_result(status, file_size)
-                counter = 0              
+                counter = 0
 
     finally:
         print_result(status, file_size)
