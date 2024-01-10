@@ -24,17 +24,20 @@ def main():
     status = {'200': 0, '301': 0, '400': 0, '401': 0,
               '403': 0, '404': 0, '405': 0, '500': 0}
     counter = 0
-    for line in sys.stdin:
-        splited_line = line.split(' ')
-        status[splited_line[7]] += 1
-        file_size += int(splited_line[8])
-        counter += 1
-        if counter == 10:
-            print_result(status, file_size)
-            reset_status(status)
-            counter = 0
-            file_size = 0
-            sys.stdout.flush()
+    try:
+        for line in sys.stdin:
+            splited_line = line.split(' ')
+            status[splited_line[7]] += 1
+            file_size += int(splited_line[8])
+            counter += 1
+            if counter == 10:
+                print_result(status, file_size)
+                reset_status(status)
+                counter = 0
+                file_size = 0
+                sys.stdout.flush()
+    except KeyboardInterrupt as e:
+        sys.stdout.flush()
 
 
 if __name__ == '__main__':
