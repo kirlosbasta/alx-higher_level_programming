@@ -27,9 +27,10 @@ def main():
             if counter == 10:
                 print_result(status, file_size)
                 counter = 0
-                file_size = 0
                 sys.stdout.flush()
     except KeyboardInterrupt as e:
+        print_result(status, file_size)
+        print(e)
         sys.stdout.flush()
 
 
