@@ -82,4 +82,12 @@ Traceback (most recent call last):
 ...
 TypeError: each row of m_a must be of the same size
 
+>>> print(matrix_mul())
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
 
+>>> print(matrix_mul([2]))
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
