@@ -5,12 +5,6 @@ reads stdin line by line and computes metrics
 import sys
 
 
-def reset_status(status):
-    '''reset stats dict'''
-    for key in status:
-        status[key] = 0
-
-
 def print_result(status, file_size):
     '''print the meterics'''
     print('File size: {}'.format(file_size))
@@ -32,7 +26,6 @@ def main():
             counter += 1
             if counter == 10:
                 print_result(status, file_size)
-                reset_status(status)
                 counter = 0
                 file_size = 0
                 sys.stdout.flush()
