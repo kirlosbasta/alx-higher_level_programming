@@ -8,14 +8,19 @@ class TestBase(unittest.TestCase):
     '''Test the base class'''
 
     def setUp(self):
+        Base.__nb_objects = 0
+        pass
+
+    def tearDown(self):
+        pass
+
+    def test_no_id(self):
+        '''test with no id multiple times'''
         self.b1 = Base()
         self.b2 = Base()
         self.b3 = Base()
         self.b4 = Base(12)
         self.b5 = Base()
-
-    def test_no_id(self):
-        '''test with no id multiple times'''
 
         self.assertEqual(self.b1.id, 1)
         self.assertEqual(self.b2.id, 2)
