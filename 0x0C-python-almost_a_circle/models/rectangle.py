@@ -73,7 +73,7 @@ class Rectangle(Base):
     def area(self):
         '''Return the area of rectangle'''
         return self.width * self.height
-    
+
     def display(self):
         '''display the recatngle using #'''
         if self.width == 0 or self.height == 0:
@@ -90,8 +90,10 @@ class Rectangle(Base):
 
     def __str__(self):
         '''string repersentaion of Rectangle'''
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y, self.width, self.height)
-    
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x,
+                                                       self.y, self.width,
+                                                       self.height)
+
     def update(self, *args, **kwargs):
         '''
         Assigns an argument to each attribute
@@ -116,15 +118,15 @@ class Rectangle(Base):
                     case 4:
                         self.y = args[i]
         else:
-           for key, value in kwargs.items():
+            for key, value in kwargs.items():
                 if key == 'width':
-                   self.width = value 
+                    self.width = value
                 elif key == 'height':
-                   self.height = value
+                    self.height = value
                 elif key == 'x':
-                   self.x = value
+                    self.x = value
                 elif key == 'y':
-                   self.y = value
+                    self.y = value
                 elif key == 'id':
                     self.id = value
 

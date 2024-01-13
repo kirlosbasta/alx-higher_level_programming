@@ -20,9 +20,9 @@ class TestSquare(unittest.TestCase):
     def test_no_arg(self):
         with self.assertRaises(TypeError) as e:
             r1 = Square()
-            self.assertEqual(str(e.exception), 'Square() takes 1 positional argument\
-                but 0 were given')
-            
+            self.assertEqual(str(e.exception), 'Square() takes 1\
+                             positional argument but 0 were given')
+
     def test_no_x_or_y_or_id(self):
         r1 = Square(10)
         self.assertEqual(r1.size, 10)
@@ -283,8 +283,6 @@ class TestSquare(unittest.TestCase):
         '''test to_dictionary function'''
         r1 = Square(10, 2, 1, 9)
         self.assertIsInstance(r1.to_dictionary(), dict)
-
-    
 
 
 if __name__ == '__main__':

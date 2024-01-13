@@ -311,7 +311,6 @@ class TestRectangle(unittest.TestCase):
         '''test to_dictionary function'''
         r1 = Rectangle(10, 2, 1, 9)
         self.assertIsInstance(r1.to_dictionary(), dict)
-    
 
 
 if __name__ == '__main__':
