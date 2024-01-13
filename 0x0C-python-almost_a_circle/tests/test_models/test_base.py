@@ -2,13 +2,14 @@
 '''Test the base class'''
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
     '''Test the base class'''
 
     def setUp(self):
-        Base.__nb_objects = 0
+        Base._Base__nb_objects = 0
         pass
 
     def tearDown(self):
@@ -33,6 +34,26 @@ class TestBase(unittest.TestCase):
 
         with self.assertRaises(AttributeError):
             print(self.__nb_objects)
+
+    def test_to_json(self):
+        '''test to json'''
+        r1 = Rectangle(10, 7, 2, 8)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+        res = '[{"x": 2, "y": 8, "id": 1, "height": 7, "width": 10}]'
+        self.assertEqual(type(json_dictionary), str)
+        self.assertEqual(type(dictionary), dict)
+        self.assertEqual(json_dictionary, res)
+
+    def test_to_json_empty(self):
+        '''test to json'''
+        json_dictionary = Base.to_json_string([])
+        self.assertEqual(json_dictionary, "[]")
+
+    def test_to_json_None(self):
+        '''test to json'''
+        json_dictionary = Base.to_json_string(None)
+        self.assertEqual(json_dictionary, "[]")
 
 
 if __name__ == '__main__':

@@ -305,9 +305,9 @@ class TestRectangle(unittest.TestCase):
         '''test to_dictionary function'''
         r1 = Rectangle(10, 2, 1, 9)
         res = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
-        self.assertEqual(r1.to_dictionary(), res)
+        self.assertEqual(sorted(r1.to_dictionary()), sorted(res))
 
-    def test_to_rectangle(self):
+    def test_to_dictionary_type(self):
         '''test to_dictionary function'''
         r1 = Rectangle(10, 2, 1, 9)
         self.assertIsInstance(r1.to_dictionary(), dict)

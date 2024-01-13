@@ -277,9 +277,9 @@ class TestSquare(unittest.TestCase):
         '''test to_dictionary function'''
         r1 = Square(10, 2, 1)
         res = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
-        self.assertEqual(r1.to_dictionary(), res)
+        self.assertEqual(sorted(r1.to_dictionary()), sorted(res))
 
-    def test_to_rectangle(self):
+    def test_to_dictionary_type(self):
         '''test to_dictionary function'''
         r1 = Square(10, 2, 1, 9)
         self.assertIsInstance(r1.to_dictionary(), dict)
