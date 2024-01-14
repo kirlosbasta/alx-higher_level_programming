@@ -20,8 +20,8 @@ class TestSquare(unittest.TestCase):
     def test_no_arg(self):
         with self.assertRaises(TypeError) as e:
             r1 = Square()
-            self.assertEqual(str(e.exception), 'Square() takes 1\
-                             positional argument but 0 were given')
+        self.assertEqual(str(e.exception), "Square.__init__()\
+ missing 1 required positional argument: 'size'")
 
     def test_no_x_or_y_or_id(self):
         r1 = Square(10)
@@ -48,37 +48,37 @@ class TestSquare(unittest.TestCase):
         '''test the width validation for type'''
         with self.assertRaises(TypeError) as e:
             r1 = Square('3')
-            self.assertEqual(str(e.exception), 'width must be an integer')
+        self.assertEqual(str(e.exception), 'width must be an integer')
 
     def test_validation_x(self):
         '''test the x validation for type'''
         with self.assertRaises(TypeError) as e:
             r1 = Square(3, '2', 8)
-            self.assertEqual(str(e.exception), 'x must be an integer')
+        self.assertEqual(str(e.exception), 'x must be an integer')
 
     def test_validation_y(self):
         '''test the y validation for type'''
         with self.assertRaises(TypeError) as e:
             r1 = Square(3, 8, '1')
-            self.assertEqual(str(e.exception), 'y must be an integer')
+        self.assertEqual(str(e.exception), 'y must be an integer')
 
     def test_value_validation_size(self):
         '''test the values'''
         with self.assertRaises(ValueError) as e:
             r1 = Square(-1)
-            self.assertEqual(str(e.exception), 'width must be > 0')
+        self.assertEqual(str(e.exception), 'width must be > 0')
 
     def test_value_validation_x(self):
         '''test the values'''
         with self.assertRaises(ValueError) as e:
             r1 = Square(3, -2, 0)
-            self.assertEqual(str(e.exception), 'x must be >= 0')
+        self.assertEqual(str(e.exception), 'x must be >= 0')
 
     def test_value_validation_y(self):
         '''test the values'''
         with self.assertRaises(ValueError) as e:
             r1 = Square(3, 9, -2)
-            self.assertEqual(str(e.exception), 'y must be >= 0')
+        self.assertEqual(str(e.exception), 'y must be >= 0')
 
     def test_area(self):
         '''test the area of rectangle'''
@@ -94,18 +94,18 @@ class TestSquare(unittest.TestCase):
         r1 = Square(3)
         with self.assertRaises(TypeError) as e:
             r1.area(r1.height)
-            msg = 'Square.area() takes 1 positional argument\
-                but 2 were given'
-            self.assertEqual(str(e.exception), msg)
+        msg = 'Rectangle.area() takes 1 positional argument\
+ but 2 were given'
+        self.assertEqual(str(e.exception), msg)
 
     def test_display_arg(self):
         '''test the argument of display'''
         r1 = Square(3)
         with self.assertRaises(TypeError) as e:
-            r1.area(r1.height)
-            msg = 'Square.display() takes 1 positional argument\
-                but 2 were given'
-            self.assertEqual(str(e.exception), msg)
+            r1.display(r1.height)
+        msg = 'Rectangle.display() takes 1 positional argument\
+ but 2 were given'
+        self.assertEqual(str(e.exception), msg)
 
     def test_display(self):
         '''test display'''
