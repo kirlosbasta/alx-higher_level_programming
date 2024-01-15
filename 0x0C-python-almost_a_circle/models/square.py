@@ -37,15 +37,14 @@ class Square(Rectangle):
         '''
         if args:
             for i in range(len(args)):
-                match i:
-                    case 0:
-                        self.id = args[i]
-                    case 1:
-                        self.size = args[i]
-                    case 2:
-                        self.x = args[i]
-                    case 3:
-                        self.y = args[i]
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.size = args[i]
+                elif i == 2:
+                    self.x = args[i]
+                elif i == 3:
+                    self.y = args[i]
         else:
             for key, value in kwargs.items():
                 if key == 'size':
