@@ -4,6 +4,7 @@ class will be the “base” of all other classes
 in this project
 '''
 import json
+import turtle
 
 
 class Base:
@@ -100,3 +101,27 @@ class Base:
                 return list_instance
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        '''draw rectangle and square from each list respectively'''
+        t = turtle.Turtle()
+        t.color('blue', 'cyan')
+        turtle.getscreen().bgcolor('#555F40')
+        for rec in list_rectangles:
+            t.pu()
+            t.goto(rec.x, rec.y)
+            t.pd()
+            for i in range(2):
+                t.fd(rec.width * 2)
+                t.lt(90)
+                t.fd(rec.height * 2)
+                t.lt(90)
+        for sq in list_squares:
+            t.pu()
+            t.goto(sq.x, sq.y)
+            t.pd()
+            for i in range(4):
+                t.fd(sq.size * 2)
+                t.lt(90)
+        turtle.done()
