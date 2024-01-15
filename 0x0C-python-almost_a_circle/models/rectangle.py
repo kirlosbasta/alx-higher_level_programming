@@ -8,7 +8,9 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    '''set some feature of rectangle'''
+    '''
+    set some feature of rectangle
+    '''
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''initialize some basic feature of rectangle'''
