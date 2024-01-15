@@ -96,7 +96,7 @@ class TestBase(unittest.TestCase):
         r2 = Rectangle(2, 4)
         with self.assertRaises(TypeError) as e:
             Rectangle.save_to_file()
-        err = "Base.save_to_file() missing 1 required positional\
+        err = "save_to_file() missing 1 required positional\
  argument: 'list_objs'"
         self.assertEqual(str(e.exception), err)
 
@@ -140,7 +140,7 @@ class TestBase(unittest.TestCase):
         r2 = Square(2, 4)
         with self.assertRaises(TypeError) as e:
             Square.save_to_file()
-        err = "Base.save_to_file() missing 1 required positional\
+        err = "save_to_file() missing 1 required positional\
  argument: 'list_objs'"
         self.assertEqual(str(e.exception), err)
 
@@ -148,7 +148,7 @@ class TestBase(unittest.TestCase):
         '''test from_json_string with no arg'''
         with self.assertRaises(TypeError) as e:
             Base.from_json_string()
-        err = "Base.from_json_string() missing 1 required\
+        err = "from_json_string() missing 1 required\
  positional argument: 'json_string'"
         self.assertEqual(str(e.exception), err)
 
@@ -166,7 +166,7 @@ class TestBase(unittest.TestCase):
         '''test from_json_string with 2 arg'''
         with self.assertRaises(TypeError) as e:
             Base.from_json_string('fdfd', 'fdfdfd')
-        err = "Base.from_json_string() takes 1 positional\
+        err = "from_json_string() takes 1 positional\
  argument but 2 were given"
         self.assertEqual(str(e.exception), err)
 

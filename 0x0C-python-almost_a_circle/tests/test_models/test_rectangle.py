@@ -111,7 +111,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(3, 2)
         with self.assertRaises(TypeError) as e:
             r1.area(r1.height)
-        msg = 'Rectangle.area() takes 1 positional argument\
+        msg = 'area() takes 1 positional argument\
  but 2 were given'
         self.assertEqual(str(e.exception), msg)
 
@@ -120,7 +120,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(3, 2)
         with self.assertRaises(TypeError) as e:
             r1.display(r1.height)
-        msg = 'Rectangle.display() takes 1 positional argument\
+        msg = 'display() takes 1 positional argument\
  but 2 were given'
         self.assertEqual(str(e.exception), msg)
 

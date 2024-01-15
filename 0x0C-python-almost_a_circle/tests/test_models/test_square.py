@@ -20,7 +20,7 @@ class TestSquare(unittest.TestCase):
     def test_no_arg(self):
         with self.assertRaises(TypeError) as e:
             r1 = Square()
-        self.assertEqual(str(e.exception), "Square.__init__()\
+        self.assertEqual(str(e.exception), "__init__()\
  missing 1 required positional argument: 'size'")
 
     def test_no_x_or_y_or_id(self):
@@ -94,7 +94,7 @@ class TestSquare(unittest.TestCase):
         r1 = Square(3)
         with self.assertRaises(TypeError) as e:
             r1.area(r1.height)
-        msg = 'Rectangle.area() takes 1 positional argument\
+        msg = 'area() takes 1 positional argument\
  but 2 were given'
         self.assertEqual(str(e.exception), msg)
 
@@ -103,7 +103,7 @@ class TestSquare(unittest.TestCase):
         r1 = Square(3)
         with self.assertRaises(TypeError) as e:
             r1.display(r1.height)
-        msg = 'Rectangle.display() takes 1 positional argument\
+        msg = 'display() takes 1 positional argument\
  but 2 were given'
         self.assertEqual(str(e.exception), msg)
 
