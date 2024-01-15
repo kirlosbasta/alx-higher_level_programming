@@ -1,14 +1,24 @@
 #!/usr/bin/python3
-""" 1-main """
-from models.rectangle import Rectangle
+""" 9-main """
+from models.square import Square
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(10, 2)
-    print(r1.id)
+    s1 = Square(5)
+    print(s1)
+    print(s1.area())
+    s1.display()
 
-    r2 = Rectangle(2, 10)
-    print(r2.id)
+    print("---")
 
-    r3 = Rectangle(10, 2, 0, 0, 12)
-    print(r3.id)
+    s2 = Square(2, 2)
+    print(s2)
+    print(s2.area())
+    s2.display()
+
+    print("---")
+
+    s3 = Square(3, 1, 3)
+    print(s3)
+    print(s3.area())
+    s3.display()
