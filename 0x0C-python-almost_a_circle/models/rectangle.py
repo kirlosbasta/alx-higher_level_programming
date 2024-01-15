@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-'''Module contain Rectangle that inherits from Base
-Module contain Rectangle that inherits from Base
-Module contain Rectangle that inherits from Base
+'''
 Module contain Rectangle that inherits from Base
 '''
 from models.base import Base
