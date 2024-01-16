@@ -74,7 +74,7 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", "r") as file:
             acutal = file.read()
             res = '[]'
-            self.assertEqual(len(acutal), len(res))
+            self.assertEqual(acutal, res)
 
     def test_save_None(self):
         '''test save to file'''
