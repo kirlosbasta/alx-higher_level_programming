@@ -68,6 +68,12 @@ class TestSquare(unittest.TestCase):
             r1 = Square(-1)
         self.assertEqual(str(e.exception), 'width must be > 0')
 
+    def test_value_validation_size_0(self):
+        '''test the values'''
+        with self.assertRaises(ValueError) as e:
+            r1 = Square(0)
+        self.assertEqual(str(e.exception), 'width must be > 0')
+
     def test_value_validation_x(self):
         '''test the values'''
         with self.assertRaises(ValueError) as e:
