@@ -68,7 +68,7 @@ class TestBase(unittest.TestCase):
  {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]'
             self.assertEqual(len(acutal), len(res))
 
-    def test_save_emp(self):
+    def test_save_empty(self):
         '''test save to file'''
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as file:
@@ -109,13 +109,10 @@ class TestBase(unittest.TestCase):
  {"y": 0, "x": 0, "id": 2, "size": 2}]'
             self.assertEqual(len(acutal), len(res))
 
-    def test_save_emp_S(self):
-        '''test save to file'''
+    def test_save_to_file_empty_list(self):
         Square.save_to_file([])
-        with open("Square.json", "r") as file:
-            acutal = file.read()
-            res = '[]'
-            self.assertEqual(len(acutal), len(res))
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
 
     def test_save_None_S(self):
         '''test save to file'''
