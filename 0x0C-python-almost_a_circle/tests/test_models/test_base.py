@@ -70,10 +70,7 @@ class TestBase(unittest.TestCase):
 
     def test_save_emp(self):
         '''test save to file'''
-        r1 = Rectangle(10, 7, 2, 8)
-        r2 = Rectangle(2, 4)
-        list_r = []
-        Rectangle.save_to_file(list_r)
+        Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as file:
             acutal = file.read()
             res = '[]'
@@ -114,10 +111,7 @@ class TestBase(unittest.TestCase):
 
     def test_save_emp_S(self):
         '''test save to file'''
-        r1 = Square(10, 2, 8)
-        r2 = Square(2, 4)
-        list_r = []
-        Square.save_to_file(list_r)
+        Square.save_to_file([])
         with open("Square.json", "r") as file:
             acutal = file.read()
             res = '[]'
