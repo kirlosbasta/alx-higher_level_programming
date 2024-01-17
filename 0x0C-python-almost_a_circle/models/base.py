@@ -108,9 +108,10 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         '''draw rectangle and square from each list respectively'''
+        window = turtle.Screen()
+        window.bgcolor("#555F40")
         t = turtle.Turtle()
         t.color('blue', 'cyan')
-        turtle.getscreen().bgcolor('#555F40')
         for rec in list_rectangles:
             t.pu()
             t.goto(rec.x, rec.y)
@@ -127,4 +128,4 @@ class Base:
             for i in range(4):
                 t.fd(sq.size * 2)
                 t.lt(90)
-        turtle.done()
+        turtle.exitonclick()
