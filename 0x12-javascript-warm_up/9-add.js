@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function add(a, b) {
+function add (a, b) {
   console.log(a + b);
 }
 const arg1 = Number(process.argv[2]);
