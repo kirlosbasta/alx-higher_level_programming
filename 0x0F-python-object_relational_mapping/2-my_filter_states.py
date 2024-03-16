@@ -15,7 +15,8 @@ def main():
                          port=3306, database=database_name)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".format(search_name))
+    cur.execute("SELECT * FROM states WHERE name = '{}'\
+                ORDER BY states.id ASC".format(search_name))
     rows = cur.fetchall()
     for row in rows:
         print(row)
