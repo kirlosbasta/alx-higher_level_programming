@@ -5,6 +5,8 @@ from sqlalchemy import String, Column, Integer
 
 
 Base = declarative_base()
+
+
 class State(Base):
     '''Class state that inhierites from Base and define states table'''
     __tablename__ = 'states'
