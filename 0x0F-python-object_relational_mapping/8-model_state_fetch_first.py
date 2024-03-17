@@ -21,7 +21,7 @@ def main():
     if first:
         print(f'{first.id}: {first.name}')
     else:
-        print('')
+        print('Nothing')
     session.close()
 
 
