@@ -22,6 +22,7 @@ def main():
         print(f'{first.id}: {first.name}')
     else:
         print('')
+    session.close()
 
 
 if __name__ == '__main__':
