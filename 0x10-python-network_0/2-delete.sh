@@ -1,3 +1,3 @@
 #!/bin/bash
 # Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
-curl -sX DELETE "$1"
+curl -i -L -sX OPTIONS 0.0.0.0:5000/route_4 | grep Allow | cut -d ' ' -f 2-
